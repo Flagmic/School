@@ -7,6 +7,7 @@ public class MyLists {
 	private Integer[] list= new Integer[10];
 	private int size=0;
 		public MyLists(){
+			@SuppressWarnings("unused")
 			int[] list=new int[10];
 		}
 	public void doubleList() {
