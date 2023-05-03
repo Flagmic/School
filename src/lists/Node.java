@@ -8,7 +8,7 @@ public class Node<T> {
 	public Node(T e) {
 		this.val=e;
 	}
-	public Node(Node p, T val, Node n) {
+	public Node(Node<T> p, T val, Node<T> n) {
 		this.n=n;
 		this.val=val;
 		this.p=p;
