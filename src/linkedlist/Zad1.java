@@ -9,24 +9,29 @@ public class Zad1 {
 		LinkedList<Integer> link=new LinkedList<Integer>();
 		Scanner scan=new Scanner(System.in);
 		int n=scan.nextInt();
+		int temp=0;
+		int index=0;
 		for(int i=0;i<n;i++) {
 			link.add(scan.nextInt());
 		}
-		for(int i=link.size()-1;i>0;i--) {
-			if(link.get(i)<link.get(i-1)) {
-				int temp=link.get(i);
-				link.set(i, link.get(i-1));
-				link.set(i-1, temp);
+		for(int i=0;i<link.size()-1;i++) {
+			if(link.get(i)>link.get(i+1)) {
+				temp=link.get(i);
+				index=i;
 			}
 		}
-		for(int i=link.size()-1;i>1;i--) {
-			if(link.get(i)>link.get(i-1)) {
-				int temp=link.get(i);
-				link.set(i, link.get(i-1));
-				link.set(i-1, temp);
+		link.remove(index);
+		link.addFirst(temp);
+		for(int i=0;i<link.size()-1;i++) {
+			if(link.get(i)<link.get(i+1)) {
+				temp=link.get(i);
+				index=i;
 			}
 		}
+		link.remove(index);
+		link.addFirst(temp);
 		System.out.println(link);
+		scan.close();
 	}
 
 }
