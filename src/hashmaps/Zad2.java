@@ -16,7 +16,7 @@ public class Zad2 {
 		for(int i=0;i<hm.size();i++) {
 			int rest=k-hm.get(i);
 			if(hm.containsValue(rest)) {
-				System.out.println("Integers: "+i+" "+hm.entrySet().);
+				System.out.println("Integers: "+i+" "+hm.entrySet());
 				
 				break;
 			}
